@@ -2030,8 +2030,28 @@ video {
   position: fixed;
 }
 
+.cursor{
+  cursor: pointer;
+}
+
+/* ANIMACIONES */
+
+.anim-appear {
+  opacity: 0.01;
+}
+
+ 
+.anim-appear.anim-appear-active{
+  opacity: 2;
+  transition: opacity 5s ease-in;
+}
+
 .absolute {
   position: absolute;
+}
+.forma-img{
+  border-radius: 18% 0 5% 54%;
+  background: #f7da00;
 }
 
 .relative {

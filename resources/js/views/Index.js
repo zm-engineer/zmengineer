@@ -1,11 +1,15 @@
 /*eslint-disable*/
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+// import { Link } from "react-router-dom"
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import { Element, Link } from 'react-scroll'
 
-import IndexNavbar from "../components/Navbars/IndexNavbar.js";
-import Footer from "../components/Footers/Footer.js";
+import IndexNavbar from "../components/Navbars/IndexNavbar.js"
+import Footer from "../components/Footers/Footer.js"
+import FormContacto from "../components/Forms/FormContacto.js"
 
 export default function Index() {
+  
   return (
     <>
       <IndexNavbar fixed />
@@ -20,33 +24,29 @@ export default function Index() {
               Profesional en el desarrollo de sistemas entorno webs según las necesidades de tu empresa o marca.
               ¿necesitas un sistema a medida? ¿una aplicación web o móvil? ¿Tienes una tienda y te gustaría comenzar a vender online y aumentar tus ingresos?
               </p>
+
               <div className="mt-12">
-               
-                {/* <Link
-                  to="/"
-                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blue-500 active:bg-blue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                <Link
+                  smooth={true}
+                  to="contactame"
+                  className="get-started cursor text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blue-500 active:bg-blue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
-                  Quiero saber más
-                </Link> */}
-
-                {/* <a
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
-                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                  target="_blank"
-                >
-                  Github Star
-                </a> */}
-
+                  Contáctame
+                </Link>
               </div>
+
             </div>
           </div>
         </div>
 
-        <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
-          src={require("../../assets/img/zm.jpg")}
-          alt="..."
-        />
+        <ReactCSSTransitionGroup transitionName="anim" transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
+          <img
+            className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px forma-img"
+            src={require("../../assets/img/zm.jpg")}
+            alt="..."
+          />
+        </ReactCSSTransitionGroup>
+
       </section>
 
       <section className="mt-48 md:mt-40 pb-40 relative bg-gray-200">
@@ -112,36 +112,38 @@ export default function Index() {
                         <i className="fas fa-sitemap"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        Componentes CSS
+                        CSS
                       </h6>
-                      <p className="mb-4 text-gray-600">
-                      Con una gran cantidad de componentes CSS totalmente codificados.
+                      <p className="mb-4 text-gray-600">Código para dar estilo a tu proyecto.
+                      Contestará a preguntas del tipo: ¿Cómo hago el texto, rojo o negro?
+                      ¿Cómo hago que el contenido se muestre en tal y tal lugar de la pantalla?
                       </p>
                     </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-drafting-compass"></i>
-                      </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        Componentes JavaScript
-                      </h6>
-                      <p className="mb-4 text-gray-600">
-                        Contando con componentes muy dinamicos, para React, Vue y Angular.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-6/12 px-4">
-                  <div className="relative flex flex-col min-w-0 mt-4">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-newspaper"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">Interfaces</h6>
                       <p className="mb-4 text-gray-600">
-                        Interfaces muy amigables para el usuario.
+                      Ventanas gráficas muy amigables para tu proyecto, con las que se interactúa.
+                      </p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div className="w-full md:w-6/12 px-4">
+                <div className="relative flex flex-col min-w-0  mt-4">
+                    <div className="px-4 py-5 flex-auto">
+                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                        <i className="fas fa-drafting-compass"></i>
+                      </div>
+                      <h6 className="text-xl mb-1 font-semibold">
+                        JavaScript
+                      </h6>
+                      <p className="mb-4 text-gray-600">
+                      Se usa como complemento de HTML y CSS, contando con componentes muy dinamicos, para Frameworks como React, Vue y Angular.
                       </p>
                     </div>
                   </div>
@@ -154,7 +156,7 @@ export default function Index() {
                         Documentación
                       </h6>
                       <p className="mb-4 text-gray-600">
-                        Desde el inicio hasta que finaliza tu proyecto.
+                        Un bitácora a la mano, desde el inicio hasta que finaliza tu proyecto.
                       </p>
                     </div>
                   </div>
@@ -413,74 +415,30 @@ export default function Index() {
       </section>
 
 
-      <section className="bg-gray-700 overflow-hidden">
-        <div className="container mx-auto pb-64">
-          <div className="flex flex-wrap justify-center">
-            <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
-              <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                <div className="flex-auto p-5 lg:p-10">
-                  <h4 className="text-2xl font-semibold">
-                    ¿Tienes un proyecto en mente?
-                  </h4>
-                  <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                    Cuentanos y nos comunicaremos con usted en 24 horas.
-                  </p>
-                  <div className="relative w-full mb-3 mt-8">
-                    <label
-                      className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="full-name"
-                    >
-                      Nombre Completo
-                    </label>
-                    <input
-                      type="text"
-                      className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                      placeholder="Nombre Completo"
-                    />
-                  </div>
+      
+        <section className="bg-gray-700 overflow-hidden">
+          <Element name="contactame">
+            <div className="container mx-auto pb-64">
+              <div className="flex flex-wrap justify-center">
+                <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
+                  <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
+                    <div className="flex-auto p-5 lg:p-10">
+                      <h4 className="text-2xl font-semibold">
+                        ¿Tienes un proyecto en mente?
+                      </h4>
+                      <p className="leading-relaxed mt-1 mb-4 text-gray-600">
+                        Cuentanos y nos comunicaremos con usted en 24 horas.
+                      </p>
 
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="email"
-                    >
-                      Correo
-                    </label>
-                    <input
-                      type="email"
-                      className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                      placeholder="Correo"
-                    />
-                  </div>
-
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="message"
-                    >
-                      Mensaje
-                    </label>
-                    <textarea
-                      rows="4"
-                      cols="80"
-                      className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Escribe un mensaje..."
-                    />
-                  </div>
-                  <div className="text-center mt-6">
-                    <button
-                      className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                      type="button"
-                    >
-                      Enviar Mensaje
-                    </button>
+                      <FormContacto />
+                    
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </Element>
+        </section>
 
       <section className="pb-16 bg-gray-300 relative pt-32">
       
