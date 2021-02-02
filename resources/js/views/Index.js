@@ -1,15 +1,15 @@
 /*eslint-disable*/
 import React from "react"
-// import { Link } from "react-router-dom"
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { Element, Link } from 'react-scroll'
+import Carousel from 'react-elastic-carousel'
 
 import IndexNavbar from "../components/Navbars/IndexNavbar.js"
 import Footer from "../components/Footers/Footer.js"
 import FormContacto from "../components/Forms/FormContacto.js"
 
 export default function Index() {
-  
+
   return (
     <>
       <IndexNavbar fixed />
@@ -136,7 +136,7 @@ export default function Index() {
                       </p>
                     </div>
                   </div>
-                  
+
                 </div>
                 <div className="w-full md:w-6/12 px-4">
                   <div className="relative flex flex-col min-w-0  mt-4">
@@ -281,7 +281,7 @@ export default function Index() {
               </h3>
               <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                 Para crear una gran experiencia de usuario con interfaces amigables, se necesitan
-                de algunos componentes que requieren JavaScript, 
+                de algunos componentes que requieren JavaScript,
                 y para ello el uso de tecnologías como React, jQuery, Angular, o Vue.
               </p>
               <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
@@ -316,16 +316,6 @@ export default function Index() {
               <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                 Y para que tu sistema sea seguro y robusto, tenemos Laravel.
               </p>
-              
-              {/* <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=nr-index"
-                target="_blank"
-                className="font-bold text-gray-800 hover:text-gray-600 ease-linear transition-all duration-150"
-              >
-                View all{" "}
-                <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
-              </a> */}
-
             </div>
           </div>
         </div>
@@ -343,7 +333,7 @@ export default function Index() {
                 <p className="mt-4 text-lg leading-relaxed text-gray-600">
                   La importancia de la documentación para desarrolladores radica en el hecho de que la primera
                   contiene información sobre las operaciones del sistema de software.
-                  Esta información posibilita la reproducción del software o su adaptación para mantenimiento. 
+                  Esta información posibilita la reproducción del software o su adaptación para mantenimiento.
                   Dicha información podría perderse si no se documenta, ya que los desarrolladores van y vienen.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-gray-600">
@@ -355,7 +345,7 @@ export default function Index() {
                   o una guía para administradores de sistema, que detalle la forma de operar y
                   dar mantenimiento al sistema.
                 </p>
-                
+
               </div>
             </div>
 
@@ -372,73 +362,100 @@ export default function Index() {
             </div>
           </div>
         </div>
-       
-      </section>
-      
-        <section className="bg-gray-700 overflow-hidden">
-          <Element name="contactame">
-            <div className="container mx-auto pb-64">
-              <div className="flex flex-wrap justify-center">
-                <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
-                  <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                    <div className="flex-auto p-5 lg:p-10">
-                      <h4 className="text-2xl font-semibold">
-                        ¿Tienes un proyecto en mente?
-                      </h4>
-                      <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                        Detállame lo que quieres y me comunicaré contigo en 24 horas.
-                      </p>
 
-                      <FormContacto />
-                    
-                    </div>
+      </section>
+
+      <section className="bg-gray-700 overflow-hidden">
+        <Element name="contactame">
+          <div className="container mx-auto pb-64">
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
+                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
+                  <div className="flex-auto p-5 lg:p-10">
+                    <h4 className="text-2xl font-semibold">
+                      ¿Tienes un proyecto en mente?
+                    </h4>
+                    <p className="leading-relaxed mt-1 mb-4 text-gray-600">
+                      Detállame lo que quieres y me comunicaré contigo en 24 horas.
+                    </p>
+
+                    <FormContacto />
+
                   </div>
                 </div>
               </div>
             </div>
-          </Element>
-        </section>
+          </div>
+        </Element>
+      </section>
 
       <section className="pb-16 bg-gray-300 relative pt-32">
-      
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
-            <div className="w-full text-center lg:w-8/12">
-              <p className="text-4xl text-center">
-                <span role="img" aria-label="love">
-                  😍
-                </span>
-              </p>
-              <h3 className="font-semibold text-3xl">
-                ¿Qué dicen de mí?
-              </h3>
-              <p className="text-gray-600 text-lg leading-relaxed mt-4 mb-4">
-                "Mediante este comunicado queremos reafirmar nuevamente la grata experiencia que ha
-                sido culminar este proyecto con tan dedicado profesional y con quién esperamos poder
-                seguir trabajando en el futuro."
-              </p>
-              <div className="sm:block flex flex-col mt-10">
-                <a
-                  href="files/testimonio.pdf"
-                  target="_blank"
-                  className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg"
-                >
-                  <span>Comunicado</span>
-                </a>
-                <a
-                  href="https://ofirchile.com/"
-                  target="_blank"
-                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-blue-500 active:bg-blue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                >
-                  Ofir Chile
-                </a>
-                
+            <Carousel itemsToShow={1}>
+              <div className="w-full text-center lg:w-8/12">
+                <p className="text-4xl text-center">
+                  <span role="img" aria-label="love">
+                    😍
+                  </span>
+                </p>
+                <h3 className="font-semibold text-3xl">
+                  ¿Qué dicen de mí?
+                </h3>
+                <p className="text-gray-600 text-lg leading-relaxed mt-4 mb-4">
+                  "Mediante este comunicado queremos reafirmar nuevamente la grata experiencia que ha
+                  sido culminar este proyecto con tan dedicado profesional y con quién esperamos poder
+                  seguir trabajando en el futuro."
+                </p>
+                <div className="sm:block flex flex-col mt-10">
+                  <a
+                    href="files/testimonio.pdf"
+                    target="_blank"
+                    className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg"
+                  >
+                    <span>Comunicado</span>
+                  </a>
+                  <a
+                    href="https://ofirchile.com/"
+                    target="_blank"
+                    className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-blue-500 active:bg-blue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                  >
+                    Ofir Chile
+                  </a>
+
+                </div>
+                <div className="text-center mt-16"></div>
               </div>
-              <div className="text-center mt-16"></div>
-            </div>
+              <div className="w-full text-center lg:w-8/12">
+                <p className="text-4xl text-center">
+                  <span role="img" aria-label="love">
+                    😍
+                  </span>
+                </p>
+                <h3 className="font-semibold text-3xl">
+                  ¿Qué dicen de mí?
+                </h3>
+                <p className="text-gray-600 text-lg leading-relaxed mt-4 mb-4">
+                  "Mediante este comunicado queremos reafirmar nuevamente la grata experiencia que ha
+                  sido culminar este proyecto con tan dedicado profesional y con quién esperamos poder
+                  seguir trabajando en el futuro."
+                </p>
+                <div className="sm:block flex flex-col mt-10">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.it7loungeclub.mobile"
+                    target="_blank"
+                    className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-blue-500 active:bg-blue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                  >
+                    It7 Lounge Club
+                  </a>
+                </div>
+                <div className="text-center mt-16"></div>
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
+
       <Footer />
     </>
   );
