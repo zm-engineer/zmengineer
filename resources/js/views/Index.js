@@ -436,9 +436,7 @@ export default function Index() {
                   ¿Qué dicen de mí?
                 </h3>
                 <p className="text-gray-600 text-lg leading-relaxed mt-4 mb-4">
-                  "Mediante este comunicado queremos reafirmar nuevamente la grata experiencia que ha
-                  sido culminar este proyecto con tan dedicado profesional y con quién esperamos poder
-                  seguir trabajando en el futuro."
+                  "Me creó una app de pasada, realmente atendió a todas mis necesidades de manera increible. Os recomiendo, excelente profesional."
                 </p>
                 <div className="sm:block flex flex-col mt-10">
                   <a
