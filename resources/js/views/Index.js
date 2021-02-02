@@ -436,7 +436,7 @@ export default function Index() {
                   ¿Qué dicen de mí?
                 </h3>
                 <p className="text-gray-600 text-lg leading-relaxed mt-4 mb-4">
-                  "Me creó una app de pasada, realmente atendió a todas mis necesidades de manera increible. Os recomiendo, excelente profesional."
+                  "Para IT7 Lounge Club el trabajo realizado por ZM Engineer ha sido fundamental para el desarrollo de nuestra actividad económica, excelente profesional y muy atenta en todo momento."
                 </p>
                 <div className="sm:block flex flex-col mt-10">
                   <a

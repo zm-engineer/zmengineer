@@ -1,3 +1,3 @@
-const url = 'http://zmengineer.herokuapp.com';
+const url = 'http://zmengineer.herokuapp.com/';
 
 export default url;

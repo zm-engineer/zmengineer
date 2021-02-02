@@ -13,6 +13,7 @@ export default class Contacto extends React.Component {
             mensaje: "",
             alertExit: false,
             alertError: false,
+            alertError2: false,
             error: null
         }
 
@@ -30,7 +31,16 @@ export default class Contacto extends React.Component {
     handleSubmit (e) {
         e.preventDefault()
 
-        try {
+        if(this.state.nombre == '' || this.state.correo == '' || this.state.mensaje == '') {
+          this.setState({
+              alertError2: true
+          })
+
+        }else{
+
+          this.setState({
+              alertError2: false
+          })
 
             let config = {
                 method: 'POST',
@@ -41,11 +51,11 @@ export default class Contacto extends React.Component {
                 body: JSON.stringify(this.state)
             }
 
-              fetch(`${url}/api/contacto`, config)
+             fetch(`${url}/api/contacto`, config)
              .then((res) => {
               let json = res.json()
-
-              if(res.data){
+              
+              if(res.status ==201 ){
                 this.setState({
                     nombre: "",
                     correo: "",
@@ -59,24 +69,10 @@ export default class Contacto extends React.Component {
               }
 
             }).catch((err) => {
-              console.log('error 1')
               this.setState({
                   err,
                   alertError: true
-
               })
-            })
-
-
-
-
-        } catch (error) {
-          console.log('error 2')
-
-            this.setState({
-                error,
-                alertError: true
-
             })
         }
 
@@ -162,6 +158,13 @@ export default class Contacto extends React.Component {
                         Ha ocurrido un error — intente mas tarde!
                         </Alert>
                     ) : null }
+
+                    { this.state.alertError2 ? (
+                        <Alert variant="outlined" severity="error">
+                          Ingrese los datos que faltan
+                        </Alert>
+                    ) : null }
+
 
                 </div>
 
