@@ -1,5 +1,6 @@
 import React from "react"
 import { Alert, AlertTitle } from '@material-ui/lab'
+import url from '../../url'
 
 export default class Contacto extends React.Component {
 
@@ -40,8 +41,7 @@ export default class Contacto extends React.Component {
                 body: JSON.stringify(this.state)
             }
 
-          // desarrollo  let res = await fetch('http://127.0.0.1:8000/api/contacto', config)
-            let res = await fetch(location.protocol + '//zmengineer.herokuapp.com/api/contacto', config)
+            let res = await fetch(`${url}/api/contacto`, config)
             let json = await res.json()
 
             this.setState({
