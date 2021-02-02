@@ -17,7 +17,10 @@ class ContactoTest extends TestCase
      */
     public function testPostContacto()
     {
-        $contacto = factory(Contacto::class)->make(); //queda grabado en memoria, en caso de get seria create()
+
+      //  $this->withoutExceptionHandling(); //Para saber exactamente cual es el date_get_last_errors
+
+        $contacto = factory(Contacto::class)->make(); //queda grabado en memoria, en caso de get seria create()   factory(Contacto::class, 3)->create()
 
         $response = $this->json('POST', 'api/contacto', [
             'nombre' => $contacto->nombre,
@@ -31,7 +34,7 @@ class ContactoTest extends TestCase
             'nombre',
             'correo',
             'mensaje'
-        ])->assertStatus(201); 
+        ])->assertStatus(201);
 
         $this->assertDatabaseHas('contactos', [
             'nombre' => $contacto->nombre,

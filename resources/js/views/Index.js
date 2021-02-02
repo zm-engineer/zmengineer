@@ -21,8 +21,9 @@ export default function Index() {
                Rétame con tu imaginación.
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              Profesional en el desarrollo de sistemas entorno webs según las necesidades de tu empresa o marca.
-              ¿necesitas un sistema a medida? ¿una aplicación web o móvil? ¿Tienes una tienda y te gustaría comenzar a vender online y aumentar tus ingresos?
+              Cuentame que proyecto tienes en mente, y te indicaré cual sería el mejor desarrollo tecnológico después de un análisis bajo metodología de estudio de tu sistema actual sea digitalizado o aún no, de acuerdo a tus necesidades y según los requerimientos obtenidos tanto funcionales como no funcionales.
+              <br/>
+              Tal vez, ¿Un sistema a medida? ¿una aplicación web o móvil? ¿Tienes una tienda y te gustaría comenzar a vender online y aumentar tus ingresos? o algún otro?
               </p>
 
               <div className="mt-12">
@@ -94,16 +95,20 @@ export default function Index() {
                     Hola, soy
                   </h4>
                   <p className="text-md font-light mt-2 text-white">
-                  Ziuling Macayo López, Ingeniera de Sistemas, Jóven Profesional que entiende la importancia de abordar cada trabajo de manera
-                  integral y cree en el poder de la comunicación simple y fácil. Con 3 años de experiencia en el
-                  mundo de desarrollo de software usando tecnologías que permitirá que su proyecto sea robusto,
-                  seguro y además muy bien documentado.
+                    Ziuling Macayo López, Ingeniera de Sistemas, Jóven Profesional que entiende la importancia de abordar cada trabajo de manera
+                    integral y cree, que la innovación e inclusión de la tecnología en las empresas se traduce en mejores resultados de negocio. Con 3 años de experiencia en el
+                    mundo de desarrollo de software usando tecnologías que permitirá que su proyecto sea robusto,
+                    seguro y además muy bien documentado.
                   </p>
                 </blockquote>
               </div>
             </div>
 
             <div className="w-full md:w-6/12 px-4">
+             <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                Tu proyecto con buen diseño, muy dinámico y documentado
+              </h3>
+
               <div className="flex flex-wrap">
                 <div className="w-full md:w-6/12 px-4">
                   <div className="relative flex flex-col mt-4">
@@ -134,18 +139,18 @@ export default function Index() {
                   
                 </div>
                 <div className="w-full md:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0  mt-4">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-drafting-compass"></i>
+                  <div className="relative flex flex-col min-w-0  mt-4">
+                      <div className="px-4 py-5 flex-auto">
+                        <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                          <i className="fas fa-drafting-compass"></i>
+                        </div>
+                        <h6 className="text-xl mb-1 font-semibold">
+                          JavaScript
+                        </h6>
+                        <p className="mb-4 text-gray-600">
+                        Se usa como complemento de HTML y CSS, contando con componentes muy dinámicos, para Frameworks como React, Vue y Angular.
+                        </p>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        JavaScript
-                      </h6>
-                      <p className="mb-4 text-gray-600">
-                      Se usa como complemento de HTML y CSS, contando con componentes muy dinamicos, para Frameworks como React, Vue y Angular.
-                      </p>
-                    </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
                     <div className="px-4 py-5 flex-auto">
@@ -350,51 +355,7 @@ export default function Index() {
                   o una guía para administradores de sistema, que detalle la forma de operar y
                   dar mantenimiento al sistema.
                 </p>
-
-                {/* <ul className="list-none mt-6">
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-100 mr-3">
-                          <i className="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-gray-600">
-                          Built by Developers for Developers
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-100 mr-3">
-                          <i className="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-gray-600">
-                          Carefully crafted code for Components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-100 mr-3">
-                          <i className="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-gray-600">
-                          Dynamic Javascript Components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul> */}
+                
               </div>
             </div>
 
@@ -406,15 +367,13 @@ export default function Index() {
                   transform:
                     "scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)",
                 }}
-                src={require("../../assets/img/documentation.png")}
+                src={require("../../assets/img/documentacion-software.png")}
               />
             </div>
           </div>
         </div>
        
       </section>
-
-
       
         <section className="bg-gray-700 overflow-hidden">
           <Element name="contactame">
@@ -427,7 +386,7 @@ export default function Index() {
                         ¿Tienes un proyecto en mente?
                       </h4>
                       <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                        Cuentanos y nos comunicaremos con usted en 24 horas.
+                        Detállame lo que quieres y me comunicaré contigo en 24 horas.
                       </p>
 
                       <FormContacto />
