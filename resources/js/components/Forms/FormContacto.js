@@ -27,7 +27,7 @@ export default class Contacto extends React.Component {
         });
     }
 
-    async handleSubmit (e) {
+    handleSubmit (e) {
         e.preventDefault()
 
         try {
@@ -41,18 +41,37 @@ export default class Contacto extends React.Component {
                 body: JSON.stringify(this.state)
             }
 
-            let res = await fetch(`${url}/api/contacto`, config)
-            let json = await res.json()
+              fetch(`${url}/api/contacto`, config)
+             .then((res) => {
+              let json = res.json()
 
-            this.setState({
-                nombre: "",
-                correo: "",
-                mensaje: "",
-                alertExit: true
+              if(res.data){
+                this.setState({
+                    nombre: "",
+                    correo: "",
+                    mensaje: "",
+                    alertExit: true
+                })
+              }else{
+                this.setState({
+                    alertError: true
+                })
+              }
+
+            }).catch((err) => {
+              console.log('error 1')
+              this.setState({
+                  err,
+                  alertError: true
+
+              })
             })
 
 
+
+
         } catch (error) {
+          console.log('error 2')
 
             this.setState({
                 error,
