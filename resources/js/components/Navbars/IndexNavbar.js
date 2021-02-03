@@ -33,7 +33,7 @@ export default function Navbar(props) {
             }
             id="example-navbar-warning"
           >
-           
+
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
 
               {/* <li className="flex items-center">
@@ -50,6 +50,16 @@ export default function Navbar(props) {
                   <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
               </li>
+              <li className="flex items-center">
+                <a
+                  className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="https://wa.me/message/MKBH6KBJEUT4G1"
+                  target="_blank"
+                >
+                  <i className="text-gray-500 fab fa-whatsapp text-lg leading-lg " />
+                  <span className="lg:hidden inline-block ml-2">WhatsApp</span>
+                </a>
+              </li>
 
               <li className="flex items-center">
                 <a
@@ -62,7 +72,7 @@ export default function Navbar(props) {
                 </a>
               </li>
 
-            
+
             </ul>
           </div>
         </div>
