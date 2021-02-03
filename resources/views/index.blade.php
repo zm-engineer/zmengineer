@@ -6,6 +6,7 @@
 
         <title>ZM Engineer</title>
         <meta name="description" content="¿Necesitas un sistema a medida? ¿una aplicación web o aplicación móvil? ¿Tienes una tienda y te gustaría comenzar a vender online y aumentar tus ingresos? te lo tengo con tan solo usar las mejores tecnologías para un proyecto web.">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
         <link rel="icon" href="{{ url('zm.ico') }}"  type="image/x-icon"/>
 
         <!-- Fonts -->
@@ -14,7 +15,7 @@
         <!-- Styles -->
     </head>
     <body>
-        
+
         <div id="root"></div>
 
     </body>
