@@ -384,29 +384,31 @@ function Index() {
 
       </section>
 
-      <Element name="contactame">
+
         <section className="bg-gray-700 overflow-hidden">
             <div className="container mx-auto pb-64">
-              <div className="flex flex-wrap justify-center">
-                <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
-                  <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                    <div className="flex-auto p-5 lg:p-10">
-                      <h4 data-aos="fade-down" className="text-2xl font-semibold">
-                        ¿Tienes un proyecto en mente?
-                      </h4>
-                      <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                        Detállame lo que quieres y me comunicaré contigo en 24 horas.
-                      </p>
+              <Element name="contactame">
+                <div className="flex flex-wrap justify-center">
+                  <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
+                    <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
+                        <div className="flex-auto p-5 lg:p-10">
+                          <h4 data-aos="fade-down" className="text-2xl font-semibold">
+                            ¿Tienes un proyecto en mente?
+                          </h4>
+                          <p className="leading-relaxed mt-1 mb-4 text-gray-600">
+                            Detállame lo que quieres y me comunicaré contigo en 24 horas.
+                          </p>
 
-                      <FormContacto />
+                          <FormContacto />
 
+                        </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Element>
             </div>
         </section>
-      </Element>
+
       <section className="pb-16 bg-gray-300 relative pt-32">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
