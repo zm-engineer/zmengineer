@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>ZM Engineer</title>
-        <meta name="description" content="¿Necesitas un sistema a medida? ¿una aplicación web o aplicación móvil? ¿Tienes una tienda y te gustaría comenzar a vender online y aumentar tus ingresos? te lo tengo con tan solo usar las mejores tecnologías para un proyecto web.">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+        <meta name="description" content="Desarrollo web y móvil en la Palma, y toda Canarias ¿Necesitas un sistema a medida? ¿una intranet? ¿una aplicación web o aplicación móvil? ¿Tienes una tienda y te gustaría comenzar a vender online y aumentar tus ingresos? te lo tengo, con tan solo usar las mejores tecnologías para tu proyecto.">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <link rel="icon" href="{{ url('zm.ico') }}"  type="image/x-icon"/>
 
         <!-- Fonts -->

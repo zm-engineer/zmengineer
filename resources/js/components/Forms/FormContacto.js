@@ -58,7 +58,7 @@ export default class Contacto extends React.Component {
              .then((res) => {
               let json = res.json()
 
-              if(res.status ==201 ){
+              if(res.status == 201 ){
                 this.setState({
                     nombre: "",
                     correo: "",

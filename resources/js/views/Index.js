@@ -1,14 +1,23 @@
 /*eslint-disable*/
-import React from "react"
+import React, { useEffect }  from "react"
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { Element, Link } from 'react-scroll'
 import Carousel from 'react-elastic-carousel'
 
+import AOS from 'aos'
+import "aos/dist/aos.css"
+
+//componentes
 import IndexNavbar from "../components/Navbars/IndexNavbar.js"
 import Footer from "../components/Footers/Footer.js"
 import FormContacto from "../components/Forms/FormContacto.js"
 
-export default function Index() {
+function Index() {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <>
@@ -17,13 +26,20 @@ export default function Index() {
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
-              <h2 className="font-semibold text-4xl text-gray-700">
-               Rétame con tu imaginación.
-              </h2>
+                <h2 data-aos="fade-left" className="font-semibold text-4xl text-gray-700">
+                 Rétame con tu imaginación.
+                </h2>
+
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              Cuentame que proyecto tienes en mente, y te indicaré cual sería el mejor desarrollo tecnológico después de un análisis bajo metodología de estudio de tu sistema actual sea digitalizado o aún no, de acuerdo a tus necesidades y según los requerimientos obtenidos tanto funcionales como no funcionales.
+              Cuentame que proyecto tienes en mente, y te diré cual
+              sería el mejor desarrollo tecnológico después de un análisis
+              bajo metodología de estudio de tu sistema actual sea digitalizado o aún no,
+              de acuerdo a tus necesidades y según los requerimientos obtenidos tanto
+              funcionales como no funcionales.
               <br/>
-              Tal vez, ¿Un sistema a medida? ¿una aplicación web o móvil? ¿Tienes una tienda y te gustaría comenzar a vender online y aumentar tus ingresos? o algún otro?
+              Tal vez, ¿Un sistema a medida? ¿una intranet? ¿una aplicación web o móvil?
+              ¿Tienes una tienda y te gustaría comenzar a vender online y aumentar tus ingresos?
+              o ¿algún proyecto que se te haya ocurrido?
               </p>
 
               <div className="mt-12">
@@ -40,13 +56,12 @@ export default function Index() {
           </div>
         </div>
 
-        <ReactCSSTransitionGroup transitionName="anim" transitionAppear={true} transitionAppearTimeout={2000} transitionEnter={false} transitionLeave={false}>
-          <img
-            className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px forma-img"
-            src={require("../../assets/img/zm.jpg")}
-            alt="..."
-          />
-        </ReactCSSTransitionGroup>
+        <img
+          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px forma-img"
+          src={require("../../assets/img/zm.jpg")}
+          alt="..."
+          data-aos="flip-left"
+        />
 
       </section>
 
@@ -78,6 +93,7 @@ export default function Index() {
                   alt="..."
                   src={require("../../assets/img/zm-engineer.jpg")}
                   className="w-full align-middle rounded-t-lg"
+
                 />
                 <blockquote className="relative p-8 mb-4">
                   <svg
@@ -91,21 +107,23 @@ export default function Index() {
                       className="text-blue-600 fill-current"
                     ></polygon>
                   </svg>
-                  <h4 className="text-xl font-bold text-white">
+                  <h4 data-aos="fade-up" className="text-xl font-bold text-white">
                     Hola, soy
                   </h4>
                   <p className="text-md font-light mt-2 text-white">
-                    Ziuling Macayo López, Ingeniera de Sistemas, Jóven Profesional que entiende la importancia de abordar cada trabajo de manera
-                    integral y cree, que la innovación e inclusión de la tecnología en las empresas se traduce en mejores resultados de negocio. Con 3 años de experiencia en el
-                    mundo de desarrollo de software usando tecnologías que permitirá que su proyecto sea robusto,
-                    seguro y además muy bien documentado.
+                    Ziuling Macayo López, Ingeniero de Sistemas, Jóven Profesional que entiende
+                    la importancia de abordar cada trabajo de manera
+                    integral y cree, que la innovación e inclusión de la tecnología en las empresas
+                    se traduce en mejores resultados de negocio. Con 3 años de experiencia en el
+                    mundo de desarrollo de software usando tecnologías que permitirá que tu proyecto
+                    sea robusto, seguro y además muy bien documentado.
                   </p>
                 </blockquote>
               </div>
             </div>
 
             <div className="w-full md:w-6/12 px-4">
-             <h3 className="text-3xl mb-2 font-semibold leading-normal">
+             <h3 className="text-3xl mb-2 font-semibold leading-normal" data-aos="fade-up-left">
                 Tu proyecto con buen diseño, muy dinámico y documentado
               </h3>
 
@@ -113,10 +131,10 @@ export default function Index() {
                 <div className="w-full md:w-6/12 px-4">
                   <div className="relative flex flex-col mt-4">
                     <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                      <div data-aos="flip-right" className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-sitemap"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
+                      <h6 className="text-xl mb-1 font-semibold" data-aos="flip-left">
                         CSS
                       </h6>
                       <p className="mb-4 text-gray-600">Código para dar estilo a tu proyecto.
@@ -127,10 +145,10 @@ export default function Index() {
                   </div>
                   <div className="relative flex flex-col min-w-0">
                     <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                      <div data-aos="flip-left" className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-newspaper"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">Interfaces</h6>
+                      <h6 className="text-xl mb-1 font-semibold" data-aos="flip-right">Interfaces</h6>
                       <p className="mb-4 text-gray-600">
                       Ventanas gráficas muy amigables para tu proyecto, con las que se interactúa.
                       </p>
@@ -141,10 +159,10 @@ export default function Index() {
                 <div className="w-full md:w-6/12 px-4">
                   <div className="relative flex flex-col min-w-0  mt-4">
                       <div className="px-4 py-5 flex-auto">
-                        <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                        <div data-aos="flip-right" className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                           <i className="fas fa-drafting-compass"></i>
                         </div>
-                        <h6 className="text-xl mb-1 font-semibold">
+                        <h6 className="text-xl mb-1 font-semibold" data-aos="flip-left">
                           JavaScript
                         </h6>
                         <p className="mb-4 text-gray-600">
@@ -154,14 +172,14 @@ export default function Index() {
                   </div>
                   <div className="relative flex flex-col min-w-0">
                     <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                      <div data-aos="flip-left" className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-file-alt"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
+                      <h6 className="text-xl mb-1 font-semibold" data-aos="flip-right">
                         Documentación
                       </h6>
                       <p className="mb-4 text-gray-600">
-                        Un bitácora a la mano, desde el inicio hasta que finaliza tu proyecto.
+                        Una bitácora a la mano, desde el inicio hasta que finaliza tu proyecto.
                       </p>
                     </div>
                   </div>
@@ -180,7 +198,7 @@ export default function Index() {
                     href="https://laravel.com/"
                     target="_blank"
                   >
-                    <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
+                    <div data-aos="fade-right" className="bg-red-600 shadow-lg rounded-lg text-center p-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -195,7 +213,7 @@ export default function Index() {
                     href="https://es.reactjs.org/"
                     target="_blank"
                   >
-                    <div className="bg-blue-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                    <div data-aos="fade-left" className="bg-blue-500 shadow-lg rounded-lg text-center p-8 mt-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -210,7 +228,7 @@ export default function Index() {
                     href="https://ionicframework.com/"
                     target="_blank"
                   >
-                    <div className="bg-gray-800 shadow-lg rounded-lg text-center p-8 mt-8">
+                    <div data-aos="fade-right" className="bg-gray-800 shadow-lg rounded-lg text-center p-8 mt-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -227,7 +245,7 @@ export default function Index() {
                     href="https://jquery.com/"
                     target="_blank"
                   >
-                    <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
+                    <div data-aos="fade-left" className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -242,7 +260,7 @@ export default function Index() {
                     href="https://angular.io/"
                     target="_blank"
                   >
-                    <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
+                    <div data-aos="fade-right" className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -257,7 +275,7 @@ export default function Index() {
                     href="https://vuejs.org/"
                     target="_blank"
                   >
-                    <div className="bg-green-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                    <div data-aos="fade-left" className="bg-green-500 shadow-lg rounded-lg text-center p-8 mt-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -351,6 +369,7 @@ export default function Index() {
 
             <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
               <img
+                data-aos="fade-up"
                 alt="..."
                 className="max-w-full rounded-lg shadow-xl"
                 style={{
@@ -365,30 +384,29 @@ export default function Index() {
 
       </section>
 
-      <section className="bg-gray-700 overflow-hidden">
-        <Element name="contactame">
-          <div className="container mx-auto pb-64">
-            <div className="flex flex-wrap justify-center">
-              <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                  <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">
-                      ¿Tienes un proyecto en mente?
-                    </h4>
-                    <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                      Detállame lo que quieres y me comunicaré contigo en 24 horas.
-                    </p>
+      <Element name="contactame">
+        <section className="bg-gray-700 overflow-hidden">
+            <div className="container mx-auto pb-64">
+              <div className="flex flex-wrap justify-center">
+                <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
+                  <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
+                    <div className="flex-auto p-5 lg:p-10">
+                      <h4 data-aos="fade-down" className="text-2xl font-semibold">
+                        ¿Tienes un proyecto en mente?
+                      </h4>
+                      <p className="leading-relaxed mt-1 mb-4 text-gray-600">
+                        Detállame lo que quieres y me comunicaré contigo en 24 horas.
+                      </p>
 
-                    <FormContacto />
+                      <FormContacto />
 
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Element>
-      </section>
-
+        </section>
+      </Element>
       <section className="pb-16 bg-gray-300 relative pt-32">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
@@ -458,3 +476,5 @@ export default function Index() {
     </>
   );
 }
+
+export default Index;
