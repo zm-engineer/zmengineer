@@ -9,16 +9,16 @@ class EnviosCorreo {
  public static function sendMail($template, $params_template,  $to_emails, $subject){
 
     //desarrollo
-    /*
-       Mail::send($template, ['data' => $params_template],  function($message) use ($to_emails, $subject)
-      {
-          $message->from('contacto@zmengineer.com', 'ZMENGINEER');
-          $message->to($to_emails)->subject($subject);
-      });
+     Mail::send($template, ['data' => $params_template],  function($message) use ($to_emails, $subject)
+    {
+        $message->from('contacto@zmengineer.com', 'ZMENGINEER');
+        $message->to($to_emails)->subject($subject);
+    });
 
-      */
+
 
     //produccion
+    /*
    try {
 
        $view = View::make($template, [
@@ -37,6 +37,8 @@ class EnviosCorreo {
        } catch (Exception $e) {
            dd($e);
      }
+
+     */
  }
 
 
