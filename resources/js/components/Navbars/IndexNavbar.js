@@ -45,7 +45,7 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://wa.me/message/MKBH6KBJEUT4G1"
+                  href="http://bit.ly/zm-engineer"
                   target="_blank"
                 >
                   <i className="text-gray-500 fab fa-whatsapp text-lg leading-lg " />
