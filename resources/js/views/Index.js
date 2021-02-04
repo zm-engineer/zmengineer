@@ -358,7 +358,7 @@ function Index() {
                             ¿Tienes un proyecto en mente?
                           </h4>
                           <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                            Detállame lo que quieres y me comunicaré contigo en 24 horas.
+                            Detállame lo que quieres sin ningún compromiso y me comunicaré contigo en 24 horas.
                           </p>
 
                           <FormContacto />
