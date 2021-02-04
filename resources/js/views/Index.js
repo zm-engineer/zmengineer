@@ -33,8 +33,8 @@ function Index() {
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
                 ¿Te gustaría tener presencia en internet? informando sobre tus
                 servicios/productos, o ¿un sistema interno? para aumentar tu productividad
-                automatizando los diferentes procesos de tu empresa, ya sea gestion de empleados o clientes,
-                gestion de facturas, almacen, entre otros.
+                automatizando los diferentes procesos de tu empresa, ya sea gestión de empleados o clientes,
+                gestión de facturas, almacen, entre otros.
                 <br/>
                 <strong>Ya tienes un proyecto en mente</strong> y, ¿te falta la mano de obra? o, ¿no tienes bien claro que proyecto
                 se adapta mejor a tu negocio?
